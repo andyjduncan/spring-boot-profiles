@@ -1,6 +1,5 @@
-package com.adjectivecolournoun.bootprofiles.service
+package com.adjectivecolournoun.bootprofiles.external
 
-import com.adjectivecolournoun.bootprofiles.domain.ServiceResponse
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 

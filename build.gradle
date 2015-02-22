@@ -1,7 +1,7 @@
 buildscript {
     repositories { jcenter() }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE")
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.1.RELEASE'
     }
 }
 
@@ -16,6 +16,12 @@ repositories { jcenter() }
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all'
-    compile("org.springframework.boot:spring-boot-starter")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile 'org.springframework.boot:spring-boot-starter'
+
+    testCompile 'junit:junit'
+    testCompile('org.spockframework:spock-core') {
+        exclude group: 'org.codehaus.groovy'
+    }
+    testCompile 'org.spockframework:spock-spring'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
